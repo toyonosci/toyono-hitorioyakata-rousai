@@ -1,0 +1,562 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Meiryo,
+        sans-serif;
+
+    color: #333;
+    line-height: 1.8;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 18px;
+    color: #7b1e2b;
+}
+
+.header-button {
+    background: #7b1e2b;
+    color: white;
+
+    padding: 9px 22px;
+    border-radius: 30px;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #faf5f5,
+            #f2e6e6
+        );
+
+    padding: 100px 20px;
+}
+
+.hero-inner {
+    width: min(1000px, 92%);
+    margin: auto;
+}
+
+.hero-label {
+    color: #7b1e2b;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 64px);
+    line-height: 1.35;
+    margin: 15px 0 25px;
+}
+
+.hero h1 span {
+    color: #7b1e2b;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    background: #7b1e2b;
+    color: white;
+
+    padding: 17px 35px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+    font-size: 17px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.hero-note {
+    font-size: 12px;
+    color: #777;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-gray {
+    background: #f8f8f8;
+}
+
+.section-label {
+    color: #7b1e2b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.45;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.lead {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice {
+    margin-top: 40px;
+    padding: 25px 30px;
+
+    background: #fff;
+    border-left: 5px solid #7b1e2b;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    color: #7b1e2b;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature {
+    display: flex;
+    gap: 25px;
+
+    padding: 30px;
+
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.feature-number {
+    color: #7b1e2b;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.feature h3 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price-note {
+    background: white;
+
+    padding: 25px 30px;
+    margin: 30px 0;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #7b1e2b;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.price-table {
+    border-collapse: collapse;
+
+    width: 1400px;
+
+    font-size: 13px;
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.price-table thead th {
+    background: #7b1e2b;
+    color: white;
+}
+
+.price-table tbody th {
+    background: #f5eeee;
+}
+
+.table-note {
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* =========================
+   FLOW
+========================= */
+
+.flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.flow-item {
+    border-top: 4px solid #7b1e2b;
+
+    padding: 25px;
+
+    background: #fafafa;
+}
+
+.flow-item span {
+    color: #7b1e2b;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.flow-item h3 {
+    font-size: 18px;
+}
+
+
+/* =========================
+   NOTICE BOX
+========================= */
+
+.notice-box {
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 30px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    max-width: 900px;
+}
+
+details {
+    border-top: 1px solid #ddd;
+}
+
+details:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+summary {
+    cursor: pointer;
+
+    padding: 22px 10px;
+
+    font-weight: 700;
+
+    list-style: none;
+}
+
+summary::after {
+    content: "+";
+
+    float: right;
+
+    color: #7b1e2b;
+
+    font-size: 22px;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    padding: 0 10px 25px;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+    background: #7b1e2b;
+
+    color: white;
+
+    padding: 90px 20px;
+
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: clamp(28px, 4vw, 44px);
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+}
+
+.cta-white {
+    background: white;
+    color: #7b1e2b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #222;
+
+    color: white;
+
+    padding: 50px 0;
+
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.copyright {
+    margin-top: 30px !important;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   MOBILE CTA
+========================= */
+
+.mobile-cta {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .header-button {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .flow {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 22px;
+    }
+
+    .mobile-cta {
+        display: block;
+
+        position: fixed;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 2000;
+
+        background: white;
+
+        padding: 10px;
+
+        box-shadow: 0 -3px 15px rgba(0,0,0,0.15);
+    }
+
+    .mobile-cta a {
+        display: block;
+
+        background: #7b1e2b;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 13px;
+
+        border-radius: 6px;
+
+        font-weight: 700;
+    }
+
+    .footer {
+        padding-bottom: 100px;
+    }
+}
